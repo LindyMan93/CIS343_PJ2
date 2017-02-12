@@ -1,9 +1,9 @@
 %code top {
 /********************************************************************/
-/*  Contact.y 														*/
-/*	Authors:														*/
-/*		Derrik Fleming												*/
-/*		Nathan Lindenbaum											*/ 
+/*  Contact.y                                                       */
+/*  Authors:                                                        */
+/*      Derrik Fleming                                              */
+/*      Nathan Lindenbaum                                           */ 
 /********************************************************************/
 
 #include <stdio.h>
