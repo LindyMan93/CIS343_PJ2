@@ -40,9 +40,8 @@ file:			contact
 ;
 contact:	     NAME NAME STREET_NUM STREET_NAME STREET_TYPE ZIPCODE;
 %%
-int main(void){
+int main(int argc, char ** argv) {
 	yyparse();
-	printf("Your Contact has been set");
 }
 int yyerror (char *msg) {
 	return fprintf (stderr, "YACC: %s\n", msg);

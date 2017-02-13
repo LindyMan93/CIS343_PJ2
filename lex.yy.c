@@ -474,10 +474,11 @@ char *yytext;
 /*      Nathan Lindenbaum                                           */ 
 /********************************************************************/
 
+#include <stdlib.h>
 #include <stdio.h>
-#include "Contact.h"
+#include "Contact.tab.h"
 
-#line 481 "lex.yy.c"
+#line 482 "lex.yy.c"
 
 #define INITIAL 0
 
@@ -659,10 +660,10 @@ YY_DECL
 	register char *yy_cp, *yy_bp;
 	register int yy_act;
     
-#line 15 "Contact.lex"
+#line 16 "Contact.lex"
 
 
-#line 666 "lex.yy.c"
+#line 667 "lex.yy.c"
 
 	if ( !(yy_init) )
 		{
@@ -747,51 +748,51 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 17 "Contact.lex"
-{return NAME;}
+#line 18 "Contact.lex"
+{printf("Name: %s\n", yytext); yylval.sVal = yytext; return NAME;}
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 18 "Contact.lex"
-{return PHONE;} 
+#line 19 "Contact.lex"
+{printf("Phone"); yylval.sVal = yytext; return PHONE;} 
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 19 "Contact.lex"
-{return STREET_NUM;} 
+#line 20 "Contact.lex"
+{printf("sNumber"); yylval.iVal = atoi(yytext); return STREET_NUM;} 
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 20 "Contact.lex"
-{return STREET_NAME;} 
+#line 21 "Contact.lex"
+{printf("sName"); yylval.sVal = yytext; return STREET_NAME;} 
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 21 "Contact.lex"
-{return STREET_TYPE;} 
+#line 22 "Contact.lex"
+{printf("sType"); yylval.sVal = yytext; return STREET_TYPE;} 
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 22 "Contact.lex"
-{return ZIPCODE;} 
+#line 23 "Contact.lex"
+{printf("Zip"); yylval.iVal = atoi(yytext); return ZIPCODE;} 
 	YY_BREAK
 case 7:
 /* rule 7 can match eol */
 YY_RULE_SETUP
-#line 24 "Contact.lex"
+#line 25 "Contact.lex"
 ;
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 25 "Contact.lex"
+#line 26 "Contact.lex"
 {printf("Unexpected input!\n");}
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 27 "Contact.lex"
+#line 28 "Contact.lex"
 ECHO;
 	YY_BREAK
-#line 795 "lex.yy.c"
+#line 796 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1785,7 +1786,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 27 "Contact.lex"
+#line 28 "Contact.lex"
 
 
 int yywrap(void) {

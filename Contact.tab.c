@@ -1582,9 +1582,8 @@ yyreturn:
 /* Line 2055 of yacc.c  */
 #line 42 "Contact.y"
 
-int main(void){
+int main(int argc, char ** argv) {
 	yyparse();
-	printf("Your Contact has been set");
 }
 int yyerror (char *msg) {
 	return fprintf (stderr, "YACC: %s\n", msg);
