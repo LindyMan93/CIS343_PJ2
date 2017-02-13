@@ -7,6 +7,8 @@
 /********************************************************************/
 
 #include <stdio.h>
+int yylex (void);
+void yyerror(char* msg);
 }
 %union{
 	int iVal;
@@ -19,7 +21,7 @@
 %token PHONE
 %type<sVal> PHONE
 %token EMAIL
-type<sVal> EMAIL
+%type<sVal> EMAIL
 %token STREET_NUM
 %type<iVal> STREET_NUM
 %token STREET_NAME
