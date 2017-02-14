@@ -424,7 +424,7 @@ static const yytype_int8 yyrhs[] =
 /* YYRLINE[YYN] -- source line where rule number YYN was defined.  */
 static const yytype_uint8 yyrline[] =
 {
-       0,    38,    38,    39,    41
+       0,    39,    39,    40,    43
 };
 #endif
 
@@ -1539,7 +1539,7 @@ yyreturn:
 }
 
 
-#line 42 "Contacts.y"
+#line 45 "Contacts.y"
 
 int main(int argc, char ** argv) {
 	yyparse();

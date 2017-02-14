@@ -35,10 +35,13 @@ int yyerror(char* msg);
 
 
 %%
+
 file:			contact
                       |	contact file
 ;
+
 contact:	     NAME NAME STREET_NUM STREET_NAME STREET_TYPE ZIPCODE;
+
 %%
 int main(int argc, char ** argv) {
 	yyparse();
